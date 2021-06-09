@@ -1,11 +1,21 @@
 
 
-.hamburger-lines {
+.menu__toggle {
+display: flex;
+align-items: center;    
 position: fixed;
 top: 30px;
 left: 30px;
 width: 40px;
 height: 40px;
 outline: 1px solid red;
+cursor: pointer;
 
+}
+.hamburger-lines {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
 }
