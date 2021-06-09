@@ -28,12 +28,12 @@ z-index: 1;
 }
 .hamburger-lines::before {
     content: "";
-    top: 10px;
+    top: -10px;
     
 }
 .hamburger-lines::after {
     content: "";
-    top: -10px;
+    top: 10px;
     
 }
 .menu-box {
@@ -45,6 +45,7 @@ z-index: 1;
     background-color: rgb(200, 200, 200);
     top: 0;
     visibility: hidden;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     
 }
 .menu-item {
@@ -57,4 +58,15 @@ z-index: 1;
 }
 #menu__toggle:checked ~ .menu-box{
     visibility: visible;
+}
+#menu__toggle:checked ~ .hamburger-button .hamburger-lines {
+    
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .hamburger-button .hamburger-lines:before {
+    display: none;
+}
+#menu__toggle:checked ~ .hamburger-button .hamburger-lines:after {
+    top: 0;
+    transform: rotate(90deg);
 }
