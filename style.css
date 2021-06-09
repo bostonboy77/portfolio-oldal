@@ -12,10 +12,30 @@ outline: 1px solid red;
 cursor: pointer;
 
 }
-.hamburger-lines {
+.hamburger-lines,
+
+.hamburger-lines::after {
     display: block;
     position: absolute;
     width: 100%;
     height: 3px;
+    background-color: black;
+}
+.hamburger-lines::before {
+    content: "";
+    top: 10px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.hamburger-lines::after {
+    content: "";
+    top: -10px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
     background-color: black;
 }
