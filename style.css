@@ -1,5 +1,7 @@
 
-
+#menu__toggle {
+    visibility: hidden;
+}
 .hamburger-button {
 display: flex;
 align-items: center;    
@@ -37,14 +39,22 @@ z-index: 1;
 .menu-box {
     display: block;
     position: fixed;
-    padding: 100px 0;
+    padding: 75px 0;
     width: 250px;
-    
+    height: 100%;
     background-color: rgb(200, 200, 200);
     top: 0;
+    visibility: hidden;
     
 }
 .menu-item {
     padding: 20px 30px;
     font-size: 24px;
+}
+.menu-item:hover {
+    background-color: rgb(222, 222, 222);
+    cursor: pointer;
+}
+#menu__toggle:checked ~ .menu-box{
+    visibility: visible;
 }
